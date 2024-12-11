@@ -6,12 +6,11 @@ from aiogram.filters.command import Command
 from aiogram.utils.keyboard import InlineKeyboardBuilder, ReplyKeyboardBuilder
 from aiogram import F
 from data import quiz_data
-
-# Замените "YOUR_BOT_TOKEN" на токен, который вы получили от BotFather
-API_TOKEN = '7729704723:AAFdyR1F8_JFXIPdpiAyF4s-b0ujCfIw-e8'
+from dotenv import load_dotenv
 
 # Объект бота
-bot = Bot(token=API_TOKEN)
+load_dotenv()
+bot = Bot(os.getenv('TOKEN'))
 # Диспетчер
 dp = Dispatcher()
 
